@@ -31,19 +31,22 @@ button:hover, a:hover {
 
 /* contenedor del player */
 #player {
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: pop 0.2s ease;
+  width: 100%;
+  animation: pop 0.5s ease;
 }
 
-/* esto ayuda a que el canvas de ruffle no se pegue al borde */
+/* el reproductor en sí */
 ruffle-player {
+  display: block;
+  margin: 0 auto;
   max-width: 90vw;
   max-height: 80vh;
-  box-shadow: 0 0 15px #000;
   border-radius: 10px;
+  box-shadow: 0 0 15px #000;
 }
 
 /* animaciones */
