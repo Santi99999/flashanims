@@ -1,12 +1,31 @@
+<!doctype html>
 <html>
-  <title>Animaciones</title>
-  <body>
-    <center>
-      <div>
-        <h1>Animaciones</h1>
-        <p>Aca estan todas las animaciones que he hecho por ahora, esta pagina no esta terminada.</p>
-        <a href="https://santi99999.github.io/flashanims/"> Volver </a>
-      </div>
-    </center>
-  </body>
+<head>
+<meta charset="utf-8">
+<title>animaciones</title>
+<script src="../ruffle/ruffle.js"></script>
+</head>
+<body>
+<h2>Ver animaciones</h2>
+<a href="../index.html">llevame al inicio</a>
+
+<button onclick="cargar('bol.swf')">bol</button>
+<button onclick="cargar('walk.swf')">walk</button>
+<button onclick="cargar('jump.swf')">jump</button>
+<button onclick="cargar('type.swf')">type</button>
+<button onclick="cargar('runningaway.swf')">running away</button>
+
+<div id="player"></div>
+
+<script>
+const ruffle = window.RufflePlayer?.newest() || window.RufflePlayer();
+const player = ruffle.createPlayer();
+document.getElementById("player").appendChild(player);
+
+function cargar(nombre){
+  player.load(nombre);
+}
+</script>
+
+</body>
 </html>
