@@ -1,0 +1,48 @@
+/* fondo oscuro y fuente */
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* botones */
+button, a {
+  background: #222;
+  color: #eee;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* hover animado */
+button:hover, a:hover {
+  background: #444;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+/* contenedor del player */
+#player {
+  margin-top: 15px;
+  display: inline-block;
+  animation: pop 0.5s ease;
+}
+
+/* animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
